@@ -1,5 +1,4 @@
 ﻿using föreläsning20201214.MyPokemon;
-using föreläsning20201214.UtilityHelpers;
 using System;
 using System.Collections.Generic;
 
@@ -31,17 +30,18 @@ namespace föreläsning20201214
 
 
             SetupSampleData();
-
+            foreach (var item in listOfPokemons)
+            {
+                Console.WriteLine($"{item.Name} has {item.Cp}CP and an attack named {item.ChargedAttack} and has {item.Hp}Hp. The main attack strength is {item.AttackStrength}");
+            }
             Console.ReadKey();
         }
-
-       
 
         private static void SetupSampleData()
         {
             
-            listOfPokemons.Add(new Pokemon() { Name = "Charizard", Type = "Fire" });
-            listOfPokemons.Add(new Pokemon() { Name = "Tyranitar", Type = "Rock" });
+            listOfPokemons.Add(new Pokemon());
+            listOfPokemons.Add(new Pokemon());
 
         }
 
